@@ -1,18 +1,168 @@
-﻿.bloodstrike-theme { background-color: #0a0a0a; color: #e0e0e0; }
-.hero-bs {
-    min-height: 80svh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=1920&auto=format&fit=crop') center/cover;
-    border-bottom: 3px solid #ff2222; padding: 0 20px;
+﻿:root {
+    --bs-red: #ff2222;
+    --bs-red-glow: #ff0000;
+    --bs-dark: #080808;
+    --bs-panel: rgba(15, 15, 15, 0.85);
 }
-.hero-bs h1 { font-family: 'Oswald', sans-serif; font-size: clamp(3rem, 10vw, 6rem); color: #fff; text-transform: uppercase; letter-spacing: 5px; text-shadow: 0 0 15px rgba(255, 34, 34, 0.8); margin-bottom: 1rem; }
-.hero-bs p { font-size: clamp(1rem, 3vw, 1.5rem); color: #ccc; margin-bottom: 2rem; }
-.btn-bs { background-color: #ff2222; color: white; padding: 15px 40px; text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 1.3rem; text-transform: uppercase; font-weight: bold; transition: all 0.3s; clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%); }
-.btn-bs:hover { background-color: #cc0000; transform: scale(1.05); box-shadow: 0 0 20px rgba(255, 34, 34, 0.6); }
-.title-bs { font-family: 'Oswald', sans-serif; font-size: clamp(2rem, 5vw, 2.5rem); text-transform: uppercase; color: #fff; margin-bottom: 2.5rem; text-align: center; }
-.title-bs::after { content: ''; display: block; width: 80px; height: 3px; background-color: #ff2222; margin: 10px auto 0; }
+
+.bloodstrike-theme { 
+    background-color: var(--bs-dark); 
+    background-image: url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e0e0e0; 
+}
+
+/* Capa oscura sobre el fondo */
+.bloodstrike-theme::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.9) 0%, rgba(20,0,0,0.8) 100%);
+    z-index: -1;
+}
+
+/* HUD Esquinas Tácticas */
+.hud-corner {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--bs-red);
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0.6;
+}
+.top-left { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+.top-right { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+.bottom-left { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+.bottom-right { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+
+/* Hero */
+.hero-bs {
+    min-height: 90svh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+    padding: 0 20px; position: relative;
+}
+
+.hud-tag {
+    font-family: 'Teko', sans-serif;
+    color: var(--bs-red);
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--bs-red);
+    padding: 5px 15px;
+    background: rgba(255, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 34, 34, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 34, 34, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 34, 34, 0); }
+}
+
+/* Título con efecto Glitch */
+.glitch-text {
+    font-family: 'Teko', sans-serif; 
+    font-size: clamp(5rem, 15vw, 10rem); 
+    color: #fff; 
+    line-height: 0.8;
+    text-transform: uppercase; 
+    position: relative;
+    text-shadow: 0 0 10px var(--bs-red);
+}
+
+.glitch-text::before, .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 0.8;
+}
+.glitch-text::before {
+    color: var(--bs-red);
+    z-index: -1;
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-3px, 2px); }
+    40% { transform: translate(-3px, -2px); }
+    60% { transform: translate(3px, 2px); }
+    80% { transform: translate(3px, -2px); }
+    100% { transform: translate(0); }
+}
+
+.hero-bs p { 
+    font-family: 'Teko', sans-serif; 
+    font-size: clamp(1.5rem, 4vw, 2.5rem); 
+    color: #ccc; 
+    letter-spacing: 3px;
+    margin-bottom: 2rem; 
+}
+
+/* Botón Táctico */
+.btn-bs { 
+    background: var(--bs-red); 
+    color: white; 
+    padding: 15px 50px; 
+    text-decoration: none; 
+    font-family: 'Teko', sans-serif; 
+    font-size: 2rem; 
+    font-weight: bold;
+    transition: all 0.3s; 
+    clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
+    position: relative;
+}
+.btn-bs:hover { 
+    background: #fff; 
+    color: var(--bs-red);
+    box-shadow: 0 0 30px var(--bs-red-glow); 
+}
+
+/* Modos de Juego (Paneles Tácticos) */
 .modes-section { padding: clamp(3rem, 8vw, 5rem) 5%; }
-.modes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-.mode-card { background: #151515; padding: 2rem; border-top: 3px solid #333; transition: all 0.3s; }
-.mode-card:hover { border-top-color: #ff2222; transform: translateY(-5px); }
-.mode-card h3 { font-family: 'Oswald', sans-serif; font-size: 1.8rem; color: #fff; margin-bottom: 1rem; text-transform: uppercase; }
-.mode-card p { color: #999; }
+.title-bs { 
+    font-family: 'Teko', sans-serif; 
+    font-size: clamp(2.5rem, 6vw, 4rem); 
+    color: #fff; 
+    text-align: center; 
+    margin-bottom: 3rem;
+    border-bottom: 2px solid var(--bs-red);
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.modes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+
+.mode-card { 
+    background: var(--bs-panel); 
+    padding: 2rem; 
+    border: 1px solid #333;
+    position: relative;
+    transition: all 0.3s;
+}
+.mode-card:hover {
+    border-color: var(--bs-red);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 34, 34, 0.2);
+}
+.card-top-line {
+    position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+    background: var(--bs-red);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+.mode-card:hover .card-top-line { transform: scaleX(1); }
+
+.mode-card h3 { font-family: 'Teko', sans-serif; font-size: 2.5rem; color: #fff; margin-bottom: 1rem; letter-spacing: 1px; }
+.mode-card p { color: #999; font-size: 0.95rem; margin-bottom: 1.5rem; }
+.card-stats { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--bs-red); font-family: 'Teko', sans-serif; letter-spacing: 1px; border-top: 1px dashed #333; padding-top: 1rem; }
+
+/* Ajuste para el header en esta página */
+.bloodstrike-theme header { background: rgba(8,8,8,0.9) !important; border-bottom: 1px solid var(--bs-red) !important; }
+.bloodstrike-theme .logo span { color: var(--bs-red) !important; }

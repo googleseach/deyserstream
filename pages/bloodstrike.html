@@ -5,43 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deyser.Stream - Blood Strike</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/bloodstrike.css">
 </head>
-<body class="bloodstrike-theme">    <header>
+<body class="bloodstrike-theme">
+    <!-- HUD Overlay (Esquinas tácticas) -->
+    <div class="hud-corner top-left"></div>
+    <div class="hud-corner top-right"></div>
+    <div class="hud-corner bottom-left"></div>
+    <div class="hud-corner bottom-right"></div>
+
+    <header>
         <div class="logo">
             <a href="../index.html">Deyser<span>.Stream</span></a>
         </div>
         <nav>
             <div class="nav-links">
-                <a href="../index.html" class="">Inicio</a>
-                <a href="../pages/bloodstrike.html" class="active">Blood Strike</a>
-                <a href="../pages/gtavi.html" class="">GTA VI</a>
+                <a href="../index.html">Inicio</a>
+                <a href="bloodstrike.html" class="active">Blood Strike</a>
+                <a href="gtavi.html">GTA VI</a>
             </div>
             <div class="nav-actions">
                 <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">🌙</button>
-                <button class="hamburger" aria-label="Menú">
-                    <span></span><span></span><span></span>
-                </button>
+                <button class="hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
             </div>
         </nav>
-    </header>    <main>
+    </header>
+
+    <main>
         <section class="hero-bs">
-            <h1>BLOOD STRIKE</h1>
+            <div class="hud-tag">// SISTEMA DE COMBATE INICIADO</div>
+            <h1 class="glitch-text" data-text="BLOOD STRIKE">BLOOD STRIKE</h1>
             <p>Domina la arena. Sé la última bala.</p>
-            <a href="#" class="btn-bs">Jugar Ahora</a>
+            <a href="#" class="btn-bs"><span>INICIAR PARTIDA</span></a>
         </section>
+
         <section class="modes-section">
-            <h2 class="title-bs">MODOS DE JUEGO</h2>
+            <h2 class="title-bs">SELECCIONA TU ARMA</h2>
             <div class="modes-grid">
-                <div class="mode-card"><h3>Battle Royale</h3><p>Sobrevive a 49 oponentes. Solo uno puede quedar en pie.</p></div>
-                <div class="mode-card"><h3>Squad Fight</h3><p>Combate táctico 4v4. Coordina a tu equipo.</p></div>
-                <div class="mode-card"><h3>Hot Zone</h3><p>Captura y mantén la zona. Rápido y letal.</p></div>
+                <!-- Tarjeta táctica -->
+                <div class="mode-card">
+                    <div class="card-top-line"></div>
+                    <h3>BATTLE ROYALE</h3>
+                    <p>50 JUGADORES. 1 SUPERVIVIENTE. El mapa se cierra, tu tiempo se agota.</p>
+                    <div class="card-stats">
+                        <span>DIFICULTAD: ALTA</span>
+                        <span>DURACIÓN: 15 MIN</span>
+                    </div>
+                </div>
+                <div class="mode-card">
+                    <div class="card-top-line"></div>
+                    <h3>SQUAD FIGHT</h3>
+                    <p>Combate táctico 4v4. Coordina a tu escuadrón y elimina al enemigo.</p>
+                    <div class="card-stats">
+                        <span>DIFICULTAD: MEDIA</span>
+                        <span>DURACIÓN: 10 MIN</span>
+                    </div>
+                </div>
+                <div class="mode-card">
+                    <div class="card-top-line"></div>
+                    <h3>HOT ZONE</h3>
+                    <p>Captura y mantén la zona. Rápido, letal y sin piedad.</p>
+                    <div class="card-stats">
+                        <span>DIFICULTAD: EXTREMA</span>
+                        <span>DURACIÓN: 5 MIN</span>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer><p>&copy; 2024 Deyser.Stream.</p></footer>
+
+    <footer>
+        <p>&copy; 2024 Deyser.Stream. // SYSTEM ONLINE</p>
+    </footer>
     <script src="../js/main.js"></script>
 </body>
 </html>
