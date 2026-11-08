@@ -1,13 +1,190 @@
-﻿/* Estilos inspirados en Blood Strike (ajustar según el diseño) */
-.hero-bloodstrike {
-    background: linear-gradient(135deg, #1a1a1a 0%, #4a1a1a 100%);
-    padding: 5rem 2rem;
-    text-align: center;
+﻿/* =========================================
+   BLOOD STRIKE - ESTILOS ESPECÍFICOS
+   ========================================= */
+
+.bloodstrike-theme {
+    background-color: #0a0a0a;
+    color: #e0e0e0;
 }
 
-.hero-bloodstrike h2 {
-    font-size: 3rem;
+/* Hero Section */
+.hero-bs {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Fondo oscuro con imagen de soldado/shooter */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=1920&auto=format&fit=crop') center/cover;
+    border-bottom: 3px solid #ff2222;
+    padding: 0 20px;
+}
+
+.hero-bs h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+    color: #ffffff;
     text-transform: uppercase;
-    color: #ff4444;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    letter-spacing: 5px;
+    text-shadow: 0 0 15px rgba(255, 34, 34, 0.8), 0 0 30px rgba(255, 0, 0, 0.5);
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.hero-bs p {
+    font-size: 1.5rem;
+    color: #cccccc;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+/* Botón estilo militar/angular */
+.btn-bs {
+    background-color: #ff2222;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+    /* Corte diagonal */
+    clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+.btn-bs:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 34, 34, 0.6);
+}
+
+/* Títulos de Sección */
+.title-bs {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    position: relative;
+}
+
+.title-bs::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #ff2222;
+    margin: 10px auto 0;
+}
+
+/* Secciones generales */
+.modes-section, .news-section {
+    padding: 5rem 5%;
+}
+
+/* Modos de Juego (Grid) */
+.modes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.mode-card {
+    background: #151515;
+    padding: 2rem;
+    border-top: 3px solid #333;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.mode-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 34, 34, 0.05);
+    transition: width 0.3s;
+}
+
+.mode-card:hover {
+    border-top-color: #ff2222;
+    transform: translateY(-5px);
+}
+
+.mode-card:hover::before {
+    width: 100%;
+}
+
+.mode-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+.mode-card p {
+    color: #999999;
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Noticias (Grid) */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.news-card {
+    background: #111111;
+    padding: 2rem;
+    border-left: 4px solid #ff2222;
+    transition: background 0.3s;
+}
+
+.news-card:hover {
+    background: #1a1a1a;
+}
+
+.news-card .date {
+    font-family: 'Oswald', sans-serif;
+    color: #ff2222;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.news-card h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.news-card p {
+    color: #888888;
+    font-size: 0.9rem;
+}
+
+/* Ajustes Responsive */
+@media (max-width: 768px) {
+    .hero-bs h1 {
+        font-size: 4rem;
+    }
+    .hero-bs p {
+        font-size: 1.1rem;
+    }
 }
