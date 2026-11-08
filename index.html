@@ -4,36 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deyser.Stream - Tu portal de streaming</title>
-    
-    <!-- SEO y Redes Sociales -->
-    <meta name="description" content="Descubre las últimas novedades, streamers y torneos de los juegos más populares del momento en Deyser.Stream.">
-    <meta property="og:title" content="Deyser.Stream - Tu portal de streaming">
-    <meta property="og:description" content="Descubre las últimas novedades de tus juegos favoritos.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop">
-    
-    <!-- Favicon (Emoji de mando) -->
+    <meta name="description" content="Descubre las últimas novedades, streamers y torneos de los juegos más populares.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
-    
-    <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header>
+<body>    <header>
         <div class="logo">
-            <h1>Deyser<span>.Stream</span></h1>
+            <h1><a href="index.html" style="color: inherit; text-decoration: none;">Deyser<span>.Stream</span></a></h1>
         </div>
-        <nav>
-            <a href="index.html" class="active">Inicio</a>
-            <a href="pages/bloodstrike.html">Blood Strike</a>
-            <a href="pages/gtavi.html">GTA VI</a>
-            <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">🌙</button>
+        <nav class="nav-container">
+            <div class="nav-links">
+                <a href="index.html" class="active">Inicio</a>
+                <a href="pages/bloodstrike.html" class="">Blood Strike</a>
+                <a href="pages/gtavi.html" class="">GTA VI</a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">🌙</button>
+            </div>
+            <button class="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
-    </header>
-
-    <main>
-        <section class="hero">
+    </header>    <main>
+        <section class="hero" style="background-image: linear-gradient(rgba(15, 15, 19, 0.8), rgba(15, 15, 19, 0.9)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
             <div class="hero-content">
                 <h2>Tu próximo juego favorito te espera</h2>
                 <p>Descubre las últimas novedades, streamers y torneos de los juegos más populares del momento.</p>
@@ -44,37 +36,17 @@
         <section id="destacados" class="featured-games">
             <h2 class="section-title">Juegos Destacados</h2>
             <div class="games-grid">
-                <!-- Tarjeta Blood Strike -->
                 <a href="pages/bloodstrike.html" class="game-card bloodstrike-card">
-                    <div class="card-content">
-                        <h3>Blood Strike</h3>
-                        <p>Battle Royale, Squad Fight y Hot Zone.</p>
-                        <span class="play-btn">Ver sección →</span>
-                    </div>
+                    <div class="card-content"><h3>Blood Strike</h3><p>Battle Royale, Squad Fight y Hot Zone.</p><span class="play-btn">Ver sección →</span></div>
                 </a>
-                <!-- Tarjeta GTA VI -->
                 <a href="pages/gtavi.html" class="game-card gtavi-card">
-                    <div class="card-content">
-                        <h3>Grand Theft Auto VI</h3>
-                        <p>Vive la experiencia de Vice City.</p>
-                        <span class="play-btn">Ver sección →</span>
-                    </div>
+                    <div class="card-content"><h3>Grand Theft Auto VI</h3><p>Vive la experiencia de Vice City.</p><span class="play-btn">Ver sección →</span></div>
                 </a>
-                <!-- Tarjeta Cyberpunk 2077 -->
                 <a href="#" class="game-card cyberpunk-card">
-                    <div class="card-content">
-                        <h3>Cyberpunk 2077</h3>
-                        <p>Despierta en Night City.</p>
-                        <span class="play-btn">Ver sección →</span>
-                    </div>
+                    <div class="card-content"><h3>Cyberpunk 2077</h3><p>Despierta en Night City.</p><span class="play-btn">Ver sección →</span></div>
                 </a>
-                <!-- Tarjeta Valorant -->
                 <a href="#" class="game-card valorant-card">
-                    <div class="card-content">
-                        <h3>Valorant</h3>
-                        <p>Shooter táctico 5v5.</p>
-                        <span class="play-btn">Ver sección →</span>
-                    </div>
+                    <div class="card-content"><h3>Valorant</h3><p>Shooter táctico 5v5.</p><span class="play-btn">Ver sección →</span></div>
                 </a>
             </div>
         </section>
@@ -82,44 +54,13 @@
         <section class="live-streams">
             <h2 class="section-title">En Directo Ahora</h2>
             <div class="streams-grid">
-                <div class="stream-card">
-                    <div class="stream-thumbnail" style="background-color: #2a2a2a; display: flex; align-items: center; justify-content: center; color: #666;">Imagen del Stream</div>
-                    <div class="stream-info">
-                        <div class="avatar" style="background: #ff4444;"></div>
-                        <div>
-                            <h4>ProGamer_99</h4>
-                            <p>Blood Strike - Torneo</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="stream-card">
-                    <div class="stream-thumbnail" style="background-color: #2a2a2a; display: flex; align-items: center; justify-content: center; color: #666;">Imagen del Stream</div>
-                    <div class="stream-info">
-                        <div class="avatar" style="background: #ffcc00;"></div>
-                        <div>
-                            <h4>ViceCity_King</h4>
-                            <p>GTA VI - Explorando</p>
-                        </div>
-                    </div>
-                </div>
-                 <div class="stream-card">
-                    <div class="stream-thumbnail" style="background-color: #2a2a2a; display: flex; align-items: center; justify-content: center; color: #666;">Imagen del Stream</div>
-                    <div class="stream-info">
-                        <div class="avatar" style="background: #00ccff;"></div>
-                        <div>
-                            <h4>DeyserOficial</h4>
-                            <p>Charla con la comunidad</p>
-                        </div>
-                    </div>
-                </div>
+                <div class="stream-card"><div class="stream-thumbnail" style="background:#2a2a2a; display:flex; align-items:center; justify-content:center; color:#666;">Imagen</div><div class="stream-info"><div class="avatar" style="background:#ff4444;"></div><div><h4>ProGamer_99</h4><p>Blood Strike</p></div></div></div>
+                <div class="stream-card"><div class="stream-thumbnail" style="background:#2a2a2a; display:flex; align-items:center; justify-content:center; color:#666;">Imagen</div><div class="stream-info"><div class="avatar" style="background:#ffcc00;"></div><div><h4>ViceCity_King</h4><p>GTA VI</p></div></div></div>
+                <div class="stream-card"><div class="stream-thumbnail" style="background:#2a2a2a; display:flex; align-items:center; justify-content:center; color:#666;">Imagen</div><div class="stream-info"><div class="avatar" style="background:#00ccff;"></div><div><h4>DeyserOficial</h4><p>Charla</p></div></div></div>
             </div>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Deyser.Stream. Todos los derechos reservados.</p>
-    </footer>
-
+    <footer><p>&copy; 2024 Deyser.Stream.</p></footer>
     <script src="js/main.js"></script>
 </body>
 </html>
