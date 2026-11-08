@@ -43,17 +43,6 @@
     opacity: 0.8;
 }
 
-/* Rejilla retro sobre el sol */
-.hero-gta::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(transparent 50%, rgba(0,0,0,0.5) 50%);
-    background-size: 100% 4px;
-    z-index: 1;
-    pointer-events: none;
-}
-
 .hero-content { position: relative; z-index: 2; }
 
 .vice-tag {
@@ -206,3 +195,4 @@
 /* Header adaptado a GTA VI */
 .gtavi-theme header { background: rgba(10, 1, 16, 0.8) !important; border-bottom: 1px solid var(--gta-pink) !important; }
 .gtavi-theme .logo span { color: var(--gta-pink) !important; }
+

@@ -36,18 +36,6 @@ body {
     overflow-x: hidden;
 }
 
-/* EFECTO CRT SUTIL */
-body::after {
-    content: " ";
-    display: block;
-    position: fixed;
-    top: 0; left: 0; bottom: 0; right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
-    background-size: 100% 4px;
-    z-index: 9999;
-    pointer-events: none;
-}
-
 /* Scrollbar */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg-dark); }
@@ -208,3 +196,4 @@ footer { text-align: center; padding: 2rem; background-color: var(--bg-card); co
     .hamburger.active span:nth-child(2) { opacity: 0; }
     .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 }
+
