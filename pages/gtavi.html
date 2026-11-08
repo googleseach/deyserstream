@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deyser.Stream - GTA VI</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <!-- Fuentes limpias y legibles -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/gtavi.css">
 </head>
@@ -28,41 +29,156 @@
     </header>
 
     <main>
-        <section class="hero-gta">
-            <div class="vice-sunset"></div>
-            <div class="hero-content">
-                <h2 class="vice-tag">WELCOME TO LEONIDA</h2>
-                <h1>GRAND THEFT AUTO <span class="roman">VI</span></h1>
-                <p class="vice-quote">"El único modo de ganar es rompiendo las reglas."</p>
-                <a href="#" class="btn-gta">VER TRÁILER</a>
+        <!-- 1. HERO (Estilo Tienda) -->
+        <section class="ps-hero">
+            <div class="ps-hero-content">
+                <h1>Grand Theft Auto VI</h1>
+                <h2>Rockstar Games</h2>
+                
+                <div class="ps-badges">
+                    <span class="badge">PS5</span>
+                    <span class="badge outline">PS5 PRO ENHANCED</span>
+                </div>
+
+                <div class="ps-price">99,99 €</div>
+                
+                <p class="ps-legal">
+                    1 mes de suscripción a GTA+ con reserva digital del juego completo en PS Store. Reclámala en cualquier momento antes del 31 de marzo. Se renueva automáticamente. Lee Información legal y del juego a continuación.
+                </p>
+
+                <div class="ps-actions">
+                    <a href="#" class="btn-ps-orange">Reservar</a>
+                    <button class="btn-heart">♡</button>
+                </div>
+
+                <div class="ps-features-grid">
+                    <div class="feature"><span>👥</span> Compras dentro del juego opcionales</div>
+                    <div class="feature"><span>🌐</span> Compatible con juego offline</div>
+                    <div class="feature"><span>👤</span> 1 jugador</div>
+                    <div class="feature"><span>🎮</span> Compatible con el Uso a distancia</div>
+                </div>
+
+                <div class="ps-rating">
+                    <span class="rating-box">18</span>
+                    <div class="rating-descriptors">
+                        <span>VIOLENCE</span>
+                        <span>IN-GAME PURCHASES</span>
+                        <span>SEX</span>
+                        <span>STRONG LANGUAGE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="ps-hero-image">
+                <!-- Arte de Lucia y Jason -->
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" alt="GTA VI Protagonists" class="hero-art">
             </div>
         </section>
 
-        <section class="characters-section">
-            <div class="poster-text">WANTED</div>
-            <h2 class="title-gta">LOS PROTAGONISTAS</h2>
-            <div class="characters-grid">
-                <div class="character-card lucia">
-                    <div class="wanted-stars">★★★★★</div>
-                    <div class="char-info">
-                        <h3>LUCIA</h3>
-                        <p>Con el viento a su favor, todo es posible. Lista para el golpe de su vida.</p>
+        <!-- 2. CARRUSEL DE MEDIOS -->
+        <section class="ps-carousel-section">
+            <div class="carousel-container">
+                <button class="nav-arrow left">❮</button>
+                <div class="carousel-track">
+                    <div class="media-card">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=400&auto=format&fit=crop" alt="Media 1">
+                    </div>
+                    <div class="media-card playable">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=400&auto=format&fit=crop" alt="Media 2">
+                        <div class="play-circle">▶</div>
+                    </div>
+                    <div class="media-card playable">
+                        <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=400&auto=format&fit=crop" alt="Media 3">
+                        <div class="play-circle">▶</div>
+                    </div>
+                    <div class="media-card">
+                        <img src="https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?q=80&w=400&auto=format&fit=crop" alt="Media 4">
                     </div>
                 </div>
-                <div class="character-card jason">
-                    <div class="wanted-stars">★★★★☆</div>
-                    <div class="char-info">
-                        <h3>JASON</h3>
-                        <p>El dinero fácil siempre tiene un precio. Confía en el instinto, no en la ley.</p>
+                <button class="nav-arrow right">❯</button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN EXTENDED LOOK -->
+        <section class="ps-extended-look">
+            <div class="video-container">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop" alt="Video Thumbnail">
+                <div class="play-circle large">▶</div>
+            </div>
+            <div class="extended-text">
+                <h2>Grand Theft Auto VI: Una mirada extendida</h2>
+                <p>Creado en su totalidad a partir de imágenes del juego en PlayStation 5, este vídeo en profundidad de Grand Theft Auto VI hace gala de la evolución más grande e inmersiva de la saga hasta la fecha.</p>
+                <a href="#" class="btn-ps-white">Elegir edición</a>
+            </div>
+        </section>
+
+        <!-- 4. EDICIONES -->
+        <section class="ps-editions">
+            <div class="editions-grid">
+                
+                <!-- Standard Edition -->
+                <div class="edition-card">
+                    <div class="edition-image">
+                        <!-- Placeholder para el arte de la portada -->
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=600&auto=format&fit=crop" alt="GTA VI Standard Cover">
+                        <div class="cover-logo">Grand<br>Theft<br>Auto <span>VI</span></div>
+                    </div>
+                    <div class="edition-info">
+                        <h3>Standard Edition</h3>
+                        <ul class="features-list">
+                            <li>Grand Theft Auto VI</li>
+                            <li>Un mes de GTA+</li>
+                            <li>Pack Vintage Vice City</li>
+                            <li>Precarga 9 días antes</li>
+                        </ul>
+                        <div class="edition-price">79,99 €</div>
+                        <p class="ps-legal small">1 mes de suscripción a GTA+ con reserva digital del juego completo en PS Store. Reclámala en cualquier momento antes del 31 de marzo.</p>
+                        <div class="ps-actions">
+                            <a href="#" class="btn-ps-orange">Reservar</a>
+                            <button class="btn-heart">♡</button>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Ultimate Edition -->
+                <div class="edition-card">
+                    <div class="edition-image">
+                        <span class="ultimate-banner">ULTIMATE EDITION</span>
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=600&auto=format&fit=crop" alt="GTA VI Ultimate Cover">
+                        <div class="cover-logo">Grand<br>Theft<br>Auto <span>VI</span></div>
+                    </div>
+                    <div class="edition-info">
+                        <h3>Ultimate Edition</h3>
+                        <ul class="features-list">
+                            <li>Grand Theft Auto VI</li>
+                            <li>Ultimate Edition Upgrade</li>
+                            <li>Pack Vintage Vice City</li>
+                            <li>Un mes de GTA+</li>
+                            <li>Precarga 9 días antes</li>
+                        </ul>
+                        <div class="edition-price">99,99 €</div>
+                        <p class="ps-legal small">1 mes de suscripción a GTA+ con reserva digital del juego completo en PS Store. Reclámala en cualquier momento antes del 31 de marzo.</p>
+                        <div class="ps-actions">
+                            <a href="#" class="btn-ps-orange">Reservar</a>
+                            <button class="btn-heart">♡</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Deyser.Stream. // VICE CITY STATE OF MIND</p>
+    <footer style="background: transparent; color: #b3a4c6;">
+        <p>&copy; 2024 Deyser.Stream // Inspirado en PlayStation Store</p>
     </footer>
+
     <script src="../js/main.js"></script>
 </body>
 </html>

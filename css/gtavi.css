@@ -1,198 +1,242 @@
-﻿:root {
-    --gta-dark: #0a0110;
-    --gta-pink: #ff2a85;
-    --gta-cyan: #00f0ff;
-    --gta-yellow: #ffcc00;
-    --gta-purple: #2a0845;
+﻿/* =========================================
+   GTA VI - ESTILO PLAYSTATION STORE
+   ========================================= */
+
+:root {
+    --ps-bg: #2d1b4e; /* Fondo morado oficial */
+    --ps-orange: #ff4000; /* Naranja de Reservar */
+    --ps-white: #ffffff;
+    --ps-dark-card: #1a1a1a;
+    --ps-text-muted: #b3a4c6;
 }
 
-.gtavi-theme { 
-    background-color: var(--gta-dark); 
-    color: #fff; 
+.gtavi-theme {
+    background-color: var(--ps-bg);
+    color: var(--ps-white);
     font-family: 'Outfit', sans-serif;
 }
 
-/* Hero Cinematográfico */
-.hero-gta { 
-    min-height: 95svh; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
-    position: relative;
-    overflow: hidden;
-    /* Degradado estilo Atardecer de Miami */
-    background: linear-gradient(180deg, var(--gta-dark) 0%, var(--gta-purple) 40%, var(--gta-pink) 80%, #ff7b00 100%);
-    padding: 0 20px; 
+/* Header adaptado al morado */
+.gtavi-theme header { background: rgba(45, 27, 78, 0.95) !important; border-bottom: none !important; }
+.gtavi-theme .logo span { color: var(--ps-orange) !important; }
+
+/* =========================================
+   HERO (Dos columnas)
+   ========================================= */
+.ps-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 85vh;
+    padding: 4rem 5%;
+    align-items: center;
+    gap: 2rem;
 }
 
-/* Sol de Vice City */
-.vice-sunset {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40vw;
-    height: 40vw;
-    max-width: 400px;
-    max-height: 400px;
-    background: linear-gradient(to bottom, #ffcc00, #ff2a85);
-    border-radius: 50%;
-    box-shadow: 0 0 80px #ff2a85;
-    z-index: 0;
-    opacity: 0.8;
+.ps-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.hero-content { position: relative; z-index: 2; }
-
-.vice-tag {
-    font-family: 'Permanent Marker', cursive;
-    color: var(--gta-cyan);
-    font-size: clamp(1rem, 3vw, 1.5rem);
-    letter-spacing: 5px;
+.ps-hero-content h1 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 300;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 0px var(--gta-pink);
+    line-height: 1.1;
 }
 
-.hero-gta h1 { 
-    font-family: 'Bebas Neue', sans-serif; 
-    font-size: clamp(4rem, 12vw, 8rem); 
-    line-height: 0.85; 
-    color: #fff; 
-    text-shadow: 0 0 10px #fff, 0 0 20px var(--gta-pink);
-}
-.hero-gta .roman { 
-    display: block; 
-    font-size: clamp(6rem, 18vw, 12rem); 
-    color: var(--gta-cyan); 
-    text-shadow: 0 0 30px var(--gta-cyan), 0 0 60px var(--gta-cyan); 
+.ps-hero-content h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ps-text-muted);
+    margin-bottom: 2rem;
 }
 
-.vice-quote { 
-    font-size: clamp(1rem, 2.5vw, 1.5rem); 
-    color: #fff; 
-    margin: 1.5rem auto 2.5rem; 
-    font-style: italic;
-    max-width: 600px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+.ps-badges { display: flex; gap: 10px; margin-bottom: 2rem; }
+.badge {
+    background: rgba(255,255,255,0.1);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.badge.outline { border: 1px solid rgba(255,255,255,0.3); background: transparent; }
+
+.ps-price { font-size: 2rem; font-weight: 400; margin-bottom: 1.5rem; }
+
+.ps-legal { font-size: 0.85rem; color: var(--ps-text-muted); line-height: 1.5; margin-bottom: 2rem; max-width: 500px; }
+.ps-legal.small { font-size: 0.75rem; margin-bottom: 1.5rem; }
+
+.ps-actions { display: flex; align-items: center; gap: 1rem; margin-bottom: 3rem; }
+
+.btn-ps-orange {
+    background-color: var(--ps-orange);
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 50px; /* Botón pastilla */
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+.btn-ps-orange:hover { background-color: #e63900; }
+
+.btn-heart {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.3);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+.btn-heart:hover { border-color: #fff; }
+
+.ps-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.feature { font-size: 0.85rem; color: var(--ps-text-muted); display: flex; align-items: center; gap: 10px; }
+.feature span { font-size: 1.2rem; }
+
+.ps-rating { display: flex; align-items: center; gap: 1rem; }
+.rating-box { background: #e60000; color: #fff; font-weight: 900; font-size: 1.5rem; padding: 5px 15px; border-radius: 4px; }
+.rating-descriptors { display: flex; gap: 10px; flex-wrap: wrap; }
+.rating-descriptors span { font-size: 0.6rem; font-weight: 700; color: var(--ps-text-muted); border: 1px solid rgba(255,255,255,0.2); padding: 2px 6px; }
+
+.ps-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    mask-image: linear-gradient(to right, transparent, black 20%);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 20%);
 }
 
-.btn-gta { 
-    background: transparent; 
-    color: var(--gta-yellow); 
-    border: 2px solid var(--gta-yellow); 
-    padding: 15px 50px; 
-    text-decoration: none; 
-    font-family: 'Bebas Neue', sans-serif; 
-    font-size: 1.8rem; 
-    letter-spacing: 2px;
-    transition: all 0.3s; 
-    position: relative;
+/* =========================================
+   CARRUSEL DE MEDIOS
+   ========================================= */
+.ps-carousel-section { padding: 2rem 5%; position: relative; }
+.carousel-container { display: flex; align-items: center; gap: 1rem; }
+
+.nav-arrow {
+    background: #fff; color: #000; border: none; width: 40px; height: 40px;
+    border-radius: 50%; font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center;
     z-index: 2;
 }
-.btn-gta:hover { 
-    background: var(--gta-yellow); 
-    color: var(--gta-dark); 
-    box-shadow: 0 0 30px var(--gta-yellow); 
-}
 
-/* Sección de Personajes */
-.characters-section { 
-    padding: clamp(3rem, 8vw, 6rem) 5%; 
+.carousel-track {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Firefox */
+}
+.carousel-track::-webkit-scrollbar { display: none; } /* Chrome */
+
+.media-card {
+    min-width: 280px;
+    height: 160px;
+    border-radius: 10px;
+    overflow: hidden;
     position: relative;
-    background: var(--gta-dark);
+    flex-shrink: 0;
+}
+.media-card img { width: 100%; height: 100%; object-fit: cover; }
+.media-card.playable::after {
+    content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.3); transition: background 0.3s;
+}
+.media-card.playable:hover::after { background: rgba(0,0,0,0.1); }
+
+.play-circle {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.9); color: #000; width: 40px; height: 40px;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    z-index: 2; font-size: 1rem;
+}
+.play-circle.large { width: 70px; height: 70px; font-size: 1.5rem; }
+
+.carousel-dots { display: flex; justify-content: center; gap: 8px; margin-top: 1.5rem; }
+.dot { width: 30px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 2px; }
+.dot.active { background: #fff; }
+
+/* =========================================
+   EXTENDED LOOK
+   ========================================= */
+.ps-extended-look {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 5rem 5%;
+    align-items: center;
+}
+.video-container { position: relative; border-radius: 10px; overflow: hidden; }
+.video-container img { width: 100%; display: block; }
+.extended-text h2 { font-size: 2.5rem; font-weight: 400; margin-bottom: 1.5rem; }
+.extended-text p { color: var(--ps-text-muted); line-height: 1.6; margin-bottom: 2rem; font-size: 1.1rem; }
+
+.btn-ps-white {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+.btn-ps-white:hover { background: #e0e0e0; }
+
+/* =========================================
+   EDICIONES (Tarjetas oscuras)
+   ========================================= */
+.ps-editions { padding: 2rem 5% 6rem; }
+.editions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1200px; margin: 0 auto; }
+
+.edition-card {
+    background: var(--ps-dark-card);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.edition-image { position: relative; height: 350px; background: #2a2a2a; display: flex; align-items: center; justify-content: center; }
+.edition-image img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; position: absolute; inset: 0; }
+
+/* Simulación del Logo de GTA en la portada */
+.cover-logo {
+    position: relative; z-index: 2; text-align: center; font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem; line-height: 0.8; color: #fff; text-shadow: 3px 3px 0 #000;
+    text-transform: uppercase; transform: rotate(-5deg);
+}
+.cover-logo span { color: #ff2a85; font-size: 5rem; text-shadow: 3px 3px 0 #000; }
+
+.ultimate-banner {
+    position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+    color: rgba(255,255,255,0.5); font-weight: 700; letter-spacing: 5px; font-size: 0.8rem; z-index: 2;
 }
 
-.poster-text {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 15vw;
-    color: rgba(255, 255, 255, 0.03);
-    z-index: 0;
-    pointer-events: none;
-    white-space: nowrap;
-}
+.edition-info { padding: 2.5rem; flex: 1; display: flex; flex-direction: column; }
+.edition-info h3 { font-size: 1.5rem; font-weight: 400; margin-bottom: 1.5rem; color: #fff; }
+.features-list { list-style: disc; padding-left: 20px; margin-bottom: 2rem; flex: 1; }
+.features-list li { color: var(--ps-text-muted); margin-bottom: 0.8rem; font-size: 1rem; }
+.edition-price { font-size: 1.8rem; margin-bottom: 1rem; }
 
-.title-gta { 
-    font-family: 'Bebas Neue', sans-serif; 
-    font-size: clamp(2.5rem, 6vw, 4rem); 
-    text-align: center; 
-    margin-bottom: 3rem; 
-    color: #fff; 
-    position: relative;
-    z-index: 1;
+/* Responsive */
+@media (max-width: 900px) {
+    .ps-hero { grid-template-columns: 1fr; text-align: center; }
+    .ps-hero-content { align-items: center; }
+    .ps-features-grid { justify-items: center; text-align: left; }
+    .ps-hero-image img { mask-image: none; -webkit-mask-image: none; height: 400px; }
+    .ps-extended-look { grid-template-columns: 1fr; }
+    .editions-grid { grid-template-columns: 1fr; }
+    .ps-legal { text-align: center; }
 }
-.title-gta::after {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 4px;
-    background: var(--gta-pink);
-    margin: 10px auto 0;
-    box-shadow: 0 0 10px var(--gta-pink);
-}
-
-.characters-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 2rem; 
-    position: relative;
-    z-index: 1;
-}
-
-/* Tarjetas estilo Póster */
-.character-card { 
-    height: clamp(450px, 60vh, 600px); 
-    border-radius: 5px; 
-    position: relative; 
-    overflow: hidden; 
-    display: flex; 
-    align-items: flex-end; 
-    padding: 2rem; 
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: transform 0.3s;
-}
-.character-card:hover {
-    transform: translateY(-10px);
-}
-
-/* Lucia */
-.character-card.lucia { 
-    background: linear-gradient(to top, rgba(10, 1, 16, 0.95) 10%, transparent), url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop') center/cover; 
-    box-shadow: inset 0 -5px 0 var(--gta-pink);
-}
-/* Jason */
-.character-card.jason { 
-    background: linear-gradient(to top, rgba(10, 1, 16, 0.95) 10%, transparent), url('https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop') center/cover; 
-    box-shadow: inset 0 -5px 0 var(--gta-cyan);
-}
-
-/* Nivel de Búsqueda (Wanted Stars) */
-.wanted-stars {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: var(--gta-yellow);
-    font-size: 1.5rem;
-    letter-spacing: 3px;
-    text-shadow: 0 0 10px var(--gta-yellow);
-}
-
-.char-info h3 { 
-    font-family: 'Bebas Neue', sans-serif; 
-    font-size: 3rem; 
-    margin-bottom: 0.5rem; 
-    letter-spacing: 2px;
-}
-.character-card.lucia .char-info h3 { color: var(--gta-pink); text-shadow: 0 0 10px rgba(255, 42, 133, 0.5); }
-.character-card.jason .char-info h3 { color: var(--gta-cyan); text-shadow: 0 0 10px rgba(0, 240, 255, 0.5); }
-
-.char-info p { color: #ddd; font-size: 1.1rem; line-height: 1.4; }
-
-/* Header adaptado a GTA VI */
-.gtavi-theme header { background: rgba(10, 1, 16, 0.8) !important; border-bottom: 1px solid var(--gta-pink) !important; }
-.gtavi-theme .logo span { color: var(--gta-pink) !important; }
-
