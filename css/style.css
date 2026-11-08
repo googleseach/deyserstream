@@ -1,0 +1,39 @@
+﻿/* Estilos globales de Deyser.Stream */
+:root {
+    --color-primario: #1a1a2e;
+    --color-secundario: #16213e;
+    --color-acento: #e94560;
+    --texto-claro: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-primario);
+    color: var(--texto-claro);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-secundario);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 { font-size: 1.8rem; }
+
+nav a {
+    color: var(--texto-claro);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    transition: color 0.3s;
+}
+
+nav a:hover { color: var(--color-acento); }
+
+.hero { padding: 4rem 2rem; text-align: center; }
+
+/* Los estilos específicos de cada juego irán en sus archivos CSS */

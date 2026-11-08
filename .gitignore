@@ -1,0 +1,16 @@
+﻿# Dependencias de Node (si en el futuro usas npm)
+node_modules/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de editor
+.vscode/
+.idea/
+
+# Archivos de registro
+*.log
+
+# Archivos de entorno
+.env

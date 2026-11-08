@@ -1,0 +1,13 @@
+﻿/* Estilos inspirados en Blood Strike (ajustar según el diseño) */
+.hero-bloodstrike {
+    background: linear-gradient(135deg, #1a1a1a 0%, #4a1a1a 100%);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.hero-bloodstrike h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #ff4444;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
