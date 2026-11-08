@@ -3,26 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deyser.Stream - GTA VI</title>
+    <title>Deyser.Stream - Grand Theft Auto VI</title>
+    <!-- Fuentes: Outfit para el cuerpo y Bebas Neue para los títulos -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/gtavi.css">
 </head>
-<body>
+<body class="gtavi-theme">
+    <!-- Barra de Navegación -->
     <header>
-        <h1>Grand Theft Auto VI</h1>
+        <div class="logo">
+            <h1>Deyser<span>.Stream</span></h1>
+        </div>
         <nav>
             <a href="../index.html">Inicio</a>
             <a href="bloodstrike.html">Blood Strike</a>
-            <a href="gtavi.html">GTA VI</a>
+            <a href="gtavi.html" class="active">GTA VI</a>
         </nav>
     </header>
+
     <main>
-        <section class="hero-gtavi">
-            <h2>Grand Theft Auto VI</h2>
-            <p>Vive la experiencia de Vice City.</p>
+        <!-- Hero GTA VI -->
+        <section class="hero-gta">
+            <div class="hero-content">
+                <h1>GRAND THEFT AUTO <span class="roman">VI</span></h1>
+                <p>Vive la experiencia definitiva en el estado de Leonida.</p>
+                <a href="#" class="btn-gta">Ver Tráiler</a>
+            </div>
         </section>
-        <!-- Aquí irá el diseño inspirado en la página de GTA VI de PlayStation -->
+
+        <!-- Protagonistas -->
+        <section class="characters-section">
+            <h2 class="title-gta">Protagonistas</h2>
+            <div class="characters-grid">
+                <div class="character-card lucia">
+                    <div class="char-info">
+                        <h3>Lucia</h3>
+                        <p>Con el viento a su favor, todo es posible.</p>
+                    </div>
+                </div>
+                <div class="character-card jason">
+                    <div class="char-info">
+                        <h3>Jason</h3>
+                        <p>El dinero fácil siempre tiene un precio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vice City -->
+        <section class="vice-city-section">
+            <h2 class="title-gta">Explora Vice City</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1572334850248-68e5b61e148f?q=80&w=800&auto=format&fit=crop');">
+                    <span>Las Playas</span>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1512418490979-92798cec1380?q=80&w=800&auto=format&fit=crop');">
+                    <span>Vida Nocturna</span>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1549419134-2f83b1a13a8a?q=80&w=800&auto=format&fit=crop');">
+                    <span>Los Everglades</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plataformas -->
+        <section class="platforms-section">
+            <h2 class="title-gta">Disponible Próximamente</h2>
+            <div class="platforms-logos">
+                <div class="platform">PlayStation 5</div>
+                <div class="platform">Xbox Series X|S</div>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Deyser.Stream. Todos los derechos reservados.</p>
+    </footer>
+
     <script src="../js/gtavi.js"></script>
 </body>
 </html>
