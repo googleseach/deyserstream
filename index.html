@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deyser.Stream - Tu portal de streaming</title>
-    <!-- Fuente de Google -->
+    
+    <!-- SEO y Redes Sociales -->
+    <meta name="description" content="Descubre las últimas novedades, streamers y torneos de los juegos más populares del momento en Deyser.Stream.">
+    <meta property="og:title" content="Deyser.Stream - Tu portal de streaming">
+    <meta property="og:description" content="Descubre las últimas novedades de tus juegos favoritos.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop">
+    
+    <!-- Favicon (Emoji de mando) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+    
+    <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Barra de Navegación -->
     <header>
         <div class="logo">
             <h1>Deyser<span>.Stream</span></h1>
@@ -18,11 +28,11 @@
             <a href="index.html" class="active">Inicio</a>
             <a href="pages/bloodstrike.html">Blood Strike</a>
             <a href="pages/gtavi.html">GTA VI</a>
+            <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">🌙</button>
         </nav>
     </header>
 
     <main>
-        <!-- Sección Hero -->
         <section class="hero">
             <div class="hero-content">
                 <h2>Tu próximo juego favorito te espera</h2>
@@ -31,7 +41,6 @@
             </div>
         </section>
 
-        <!-- Juegos Destacados -->
         <section id="destacados" class="featured-games">
             <h2 class="section-title">Juegos Destacados</h2>
             <div class="games-grid">
@@ -51,14 +60,28 @@
                         <span class="play-btn">Ver sección →</span>
                     </div>
                 </a>
+                <!-- Tarjeta Cyberpunk 2077 -->
+                <a href="#" class="game-card cyberpunk-card">
+                    <div class="card-content">
+                        <h3>Cyberpunk 2077</h3>
+                        <p>Despierta en Night City.</p>
+                        <span class="play-btn">Ver sección →</span>
+                    </div>
+                </a>
+                <!-- Tarjeta Valorant -->
+                <a href="#" class="game-card valorant-card">
+                    <div class="card-content">
+                        <h3>Valorant</h3>
+                        <p>Shooter táctico 5v5.</p>
+                        <span class="play-btn">Ver sección →</span>
+                    </div>
+                </a>
             </div>
         </section>
 
-        <!-- Streams en Vivo -->
         <section class="live-streams">
             <h2 class="section-title">En Directo Ahora</h2>
             <div class="streams-grid">
-                <!-- Stream 1 -->
                 <div class="stream-card">
                     <div class="stream-thumbnail" style="background-color: #2a2a2a; display: flex; align-items: center; justify-content: center; color: #666;">Imagen del Stream</div>
                     <div class="stream-info">
@@ -69,7 +92,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Stream 2 -->
                 <div class="stream-card">
                     <div class="stream-thumbnail" style="background-color: #2a2a2a; display: flex; align-items: center; justify-content: center; color: #666;">Imagen del Stream</div>
                     <div class="stream-info">
@@ -80,7 +102,6 @@
                         </div>
                     </div>
                 </div>
-                 <!-- Stream 3 -->
                  <div class="stream-card">
                     <div class="stream-thumbnail" style="background-color: #2a2a2a; display: flex; align-items: center; justify-content: center; color: #666;">Imagen del Stream</div>
                     <div class="stream-info">
@@ -95,7 +116,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Deyser.Stream. Todos los derechos reservados.</p>
     </footer>
